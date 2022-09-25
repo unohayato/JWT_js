@@ -7,7 +7,11 @@
  - JWT: header: どんな形式で暗号化するのかなど, payload: 実際のデータ(name, date, password etc), veryfy..: いわゆるシークレットキー
 ### ToDo
  - npm init -y
- - 
+ - express jsonwebtoken nodemon のインストール
+ - モジュールの読み込み
+ - expressのインスタンス化
+ - PORTの宣言代入
+ - PORTの待機状態を作る＋コンソールで確認
 
 
 
