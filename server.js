@@ -25,3 +25,9 @@ app.post("/register", (req, res) => {
   return console.log(res.status(200).send(body).json());
 
 })
+
+app.get("/login", (req, res) => {
+  res.status(200).json({
+    msg: "承認に成功しました。"
+  })
+})
