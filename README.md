@@ -6,6 +6,8 @@
  - request, response でTokenの発行認証をclient, server で行うイメージ
  - JWT: header: どんな形式で暗号化するのかなど, payload: 実際のデータ(name, date, password etc), veryfy..: いわゆるシークレットキー
 ### ToDo
+## 全体の流れ
+ - postman に登録して、postmanからlocalにregister/, login/すると承認できた、できてないを返すプログラムを組む 
 #### expressのサーバーを立てる
  - npm init -y
  - express jsonwebtoken nodemon のインストール
@@ -23,3 +25,11 @@
  - postmanに情報を登録する(tokenの生成)  
  #### ログイン
  - /loginリクエストを送ると承認のメッセージをjsonで返すようにする
+ - auth.js
+  - jwtとconfigを読み込む
+  - 認証（tokenとsecretkey）をverifyして成功したら次のミドルウェアに移り、成功しなかったら認証失敗の文字列をjsonで返すauth関数を作る
+  - このmojuleをserver.jsに読み込む（login/のところに入れる）
+
+
+### セキュリティ
+ - .env, .gitignore でsercretkeyは隠しておく
